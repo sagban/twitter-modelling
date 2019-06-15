@@ -8,8 +8,6 @@ import nltk
 import numpy as np
 import re
 
-np.random.seed(2018)
-nltk.download('wordnet')
 
 
 def lemmatize_stemming(text):
@@ -29,7 +27,7 @@ def clean_data(text):
 def preprocess(text):
 
 	# Cleaning the data
-    text = clean_data(text)
+    # text = clean_data(text)
     result = []
 
     # Tokenisation and Removing STOPWORDS
@@ -42,12 +40,12 @@ def preprocess(text):
 
 def preprocess_data(fileName):
 
+	np.random.seed(2018)
+	nltk.download('wordnet')
 	data = pd.read_csv(fileName, error_bad_lines=False, encoding='latin-1')
 	data_text = data[['text']]
 	data_text["index"] = data_text.index
 	document = data_text
-
-	processed_docs = document['text'].map(preprocess)
-	return preprocess_docs
+	return document['text'].map(preprocess)
 
 
