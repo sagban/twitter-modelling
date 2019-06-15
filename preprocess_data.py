@@ -20,21 +20,22 @@ def clean_data(text):
     # Remove User
     result = re.sub('@[^\s]+','',text)
     #Fix Misspelled
-    result = re.sub(r'[^a-z]', '', text)
+    # result = re.sub(r'[^a-z]', '', text)
 
     return result
 
 def preprocess(text):
 
 	# Cleaning the data
-    # text = clean_data(text)
+    text = clean_data(text)
     result = []
 
     # Tokenisation and Removing STOPWORDS
     for token in gensim.utils.simple_preprocess(text):
         if token not in gensim.parsing.preprocessing.STOPWORDS and len(token) > 3:
             lem = lemmatize_stemming(token)
-            result.append(lem)
+            spl = re.sub(r'[^a-z]', '', lem)
+            result.append(spl)
     return result
 
 
