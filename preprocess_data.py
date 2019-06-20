@@ -11,31 +11,34 @@ import re
 
 
 def lemmatize_stemming(text):
-    stemmer = PorterStemmer()
-    return stemmer.stem(WordNetLemmatizer().lemmatize(text, pos='v'))
+    # stemmer = PorterStemmer()
+    # return stemmer.stem(WordNetLemmatizer().lemmatize(text, pos='v'))
+    return WordNetLemmatizer().lemmatize(text, pos='v')
 
 def clean_data(text):
 	# Remove URL
-    result = re.sub(r"http\S+", "", text)
+    noURL = re.sub(r"http\S+", "", text)
     # Remove User
-    result = re.sub('@[^\s]+','',text)
-    #Fix Misspelled
-    # result = re.sub(r'[^a-z]', '', text)
-
+    noUser = re.sub('@[^\s]+','', noURL)
+    result = re.sub('#[^\s]+','', noUser)
     return result
+
+    
 
 def preprocess(text):
 
-	# Cleaning the data
+    # Cleaning the data
     text = clean_data(text)
+    # print(text)
     result = []
 
     # Tokenisation and Removing STOPWORDS
     for token in gensim.utils.simple_preprocess(text):
         if token not in gensim.parsing.preprocessing.STOPWORDS and len(token) > 3:
+            token = re.sub(r'[^a-z]', '', token)
             lem = lemmatize_stemming(token)
-            spl = re.sub(r'[^a-z]', '', lem)
-            result.append(spl)
+            if len(lem) > 2:
+                result.append(lem)
     return result
 
 
