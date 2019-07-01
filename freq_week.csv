@@ -1,11 +1,11 @@
-Week Number,Value1,Value2,Value3,Value4,Value5
-1,{'girl': 1870},{'ayushman': 1772},{'claim': 1675},{'bharat': 1557},{'bear': 1182}
-2,{'ayushman': 2720},{'bharat': 2634},{'care': 716},{'medical': 687},{'worth': 683}
-3,{'ayushman': 3790},{'bharat': 3725},{'modi': 1610},{'scheme': 1408},{'healthcare': 1259}
-4,{'ayushman': 2502},{'bharat': 2330},{'scheme': 1244},{'indians': 758},{'healthcare': 642}
-5,{'ayushman': 2339},{'bharat': 2276},{'modi': 1488},{'journal': 1334},{'healthcare': 1311}
-6,{'ayushman': 3268},{'bharat': 3245},{'pmjay': 1263},{'see': 1259},{'month': 1255}
-7,{'ayushman': 2099},{'bharat': 2060},{'crore': 936},{'healthcare': 885},{'great': 879}
-8,{'ayushman': 4290},{'bharat': 4271},{'scheme': 1589},{'launch': 1186},{'benefit': 824}
-9,{'bharat': 3029},{'ayushman': 2670},{'dawai': 1514},{'scheme': 1510},{'ndtv': 1215}
-10,{'ayushman': 3945},{'bharat': 2614},{'scheme': 854},{'enthusiasm': 842},{'section': 841}
+Week Number,Word1,Value1,Word2,Value2,Word3,Value3,Word4,Value4,Word5,Value5
+1,girl,2146,ayushman,1648,bharat,1622,claim,1566,bear,1292
+2,ayushman,2294,bharat,2286,modi,1251,scheme,1078,say,901
+3,ayushman,2535,bharat,2535,modi,1428,journal,1385,rural,1371
+4,bharat,3749,ayushman,3716,healthcare,1499,launch,1145,scheme,1082
+5,ayushman,5048,bharat,3715,scheme,2009,dawai,1528,ndtv,1231
+6,ayushman,2844,bharat,2569,worth,789,days,766,care,709
+7,ayushman,3998,bharat,3769,healthcare,1580,scheme,1574,govt,925
+8,ayushman,3072,bharat,2986,pmjay,1267,enthusiasm,1254,see,1253
+9,ayushman,2673,bharat,2582,scheme,904,benefit,774,lakh,602
+10,bharat,1928,ayushman,1567,modi,614,want,589,talk,581
